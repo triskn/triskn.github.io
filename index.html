@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jing 的个人主页，收录本地 AI 实验和为 Tiiny Pocket 做的 DeepSeek Harness 插件。">
+  <meta name="theme-color" content="#f8faff">
+  <title>Jing · 本地 AI 项目</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f8faff;
+      --ink: #17213a;
+      --muted: #4b5872;
+      --accent: #3548bf;
+      --line: #dce3f2;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--accent);
+      text-underline-offset: 0.22em;
+    }
+
+    a:hover { color: #223189; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+
+    .wrap {
+      width: min(100% - 3rem, 66rem);
+      margin-inline: auto;
+    }
+
+    .masthead {
+      min-height: 4.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .wordmark {
+      font-size: 1.1875rem;
+      font-weight: 750;
+      letter-spacing: -0.045em;
+    }
+
+    .profile-link { font-size: 0.9375rem; font-weight: 650; }
+
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: clamp(1.75rem, 5vw, 4.5rem);
+      min-height: 19rem;
+      padding: clamp(2rem, 5vw, 3.75rem);
+      border: 1px solid #dbe3fa;
+      border-radius: 1.75rem;
+      background: linear-gradient(120deg, #edf2ff 20%, #e7efff 68%, #dee8ff);
+    }
+
+    h1, h2, h3, p { margin: 0; }
+
+    h1 {
+      font-size: clamp(2.25rem, 6vw, 4rem);
+      font-weight: 760;
+      line-height: 1.15;
+      letter-spacing: -0.055em;
+    }
+
+    .name { color: var(--accent); }
+
+    .intro p {
+      max-width: 33rem;
+      margin-top: 1.25rem;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.125rem);
+      line-height: 1.85;
+    }
+
+    .portrait {
+      display: block;
+      width: clamp(7rem, 17vw, 10.5rem);
+      height: auto;
+      aspect-ratio: 1;
+      border: 5px solid #fff;
+      border-radius: 50%;
+      background: #fff;
+      object-fit: cover;
+      box-shadow: 0 0 0 0.625rem #ffffff6b, 0 1.25rem 2.5rem #243d8c24;
+    }
+
+    .projects { padding-block: clamp(2.5rem, 6vw, 4rem); }
+
+    .section-heading {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.25rem 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    h2 {
+      font-size: clamp(1.625rem, 3.5vw, 2.125rem);
+      line-height: 1.2;
+      letter-spacing: -0.035em;
+    }
+
+    .section-heading p { color: var(--muted); font-size: 0.9375rem; }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .project {
+      display: flex;
+      flex-direction: column;
+      padding: 1.625rem;
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--project-color, var(--accent));
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 0.35rem 1.25rem #18254c08;
+    }
+
+    .project:nth-child(2) { --project-color: #247d79; }
+    .project:nth-child(3) { --project-color: #7763b1; }
+
+    h3 {
+      font-size: 1.375rem;
+      line-height: 1.25;
+      letter-spacing: -0.025em;
+    }
+
+    .project p {
+      margin: 0.75rem 0 1.25rem;
+      color: var(--muted);
+    }
+
+    .project a {
+      align-self: flex-start;
+      margin-top: auto;
+      font-size: 0.9375rem;
+      font-weight: 650;
+    }
+
+    @media (max-width: 48rem) {
+      .project-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 34rem) {
+      .wrap { width: calc(100% - 2rem); }
+      .masthead { min-height: 3.75rem; }
+      .intro { grid-template-columns: 1fr; min-height: auto; border-radius: 1.25rem; }
+      .portrait { grid-row: 1; width: 5.5rem; }
+      .intro p { margin-top: 0.875rem; }
+      .project { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="masthead wrap">
+    <span class="wordmark">Jing</span>
+    <a class="profile-link" href="https://github.com/triskn">GitHub · @triskn</a>
+  </header>
+
+  <main class="wrap">
+    <section class="intro" aria-labelledby="intro-title">
+      <div>
+        <h1 id="intro-title">你好，我是 <span class="name">Jing</span>。</h1>
+        <p>我关注本地 AI，喜欢把模型做成日常能用的小工具，也记录它们在真实设备上的表现。最近，我在探索 Tiiny Pocket 能帮我完成哪些创作和决策任务。</p>
+      </div>
+      <img class="portrait" src="https://avatars.githubusercontent.com/u/99636790?v=4&amp;s=336" alt="Jing 的 GitHub 头像" width="168" height="168">
+    </section>
+
+    <section class="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Tiiny 项目</h2>
+        <p>为 DeepSeek Harness 做的三个插件</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project">
+          <h3>Tiiny 3D</h3>
+          <p>用一张参考图生成带纹理的 3D 模型。在工作台里查看各阶段结果、旋转预览，并导出 GLB 文件。</p>
+          <a href="https://github.com/triskn/dsh-tiiny-3d" aria-label="在 GitHub 查看 Tiiny 3D">查看 GitHub 仓库</a>
+        </article>
+
+        <article class="project">
+          <h3>Tiiny Video</h3>
+          <p>写一段提示词，也可以加一张首帧图。在 DSH 侧栏跟踪视频生成进度，预览成片并保存到本机。</p>
+          <a href="https://github.com/triskn/dsh-tiiny-video" aria-label="在 GitHub 查看 Tiiny Video">查看 GitHub 仓库</a>
+        </article>
+
+        <article class="project">
+          <h3>TiinyDecide</h3>
+          <p>把常见的分类判断存成可复用的流程。遇到难判的输入时交给人工复核，并在运行记录里查看模型原始回答和最终结果。</p>
+          <a href="https://github.com/triskn/dsh-tiiny-decide" aria-label="在 GitHub 查看 TiinyDecide">查看 GitHub 仓库</a>
+        </article>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
