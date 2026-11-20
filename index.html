@@ -1,216 +1,58 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jing's personal site with local AI experiments and DeepSeek Harness plugins for Tiiny Pocket.">
-  <meta name="theme-color" content="#f8faff">
-  <title>Jing · Local AI Projects</title>
-  <style>
-    :root {
-      color-scheme: light;
-      --page: #f8faff;
-      --ink: #17213a;
-      --muted: #4b5872;
-      --accent: #3548bf;
-      --line: #dce3f2;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-    }
-
-    *, *::before, *::after { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      background: var(--page);
-      color: var(--ink);
-      font-size: 1rem;
-      line-height: 1.7;
-    }
-
-    a {
-      color: var(--accent);
-      text-underline-offset: 0.22em;
-    }
-
-    a:hover { color: #223189; }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
-
-    .wrap {
-      width: min(100% - 3rem, 66rem);
-      margin-inline: auto;
-    }
-
-    .masthead {
-      min-height: 4.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .wordmark {
-      font-size: 1.1875rem;
-      font-weight: 750;
-      letter-spacing: -0.045em;
-    }
-
-    .profile-link { font-size: 0.9375rem; font-weight: 650; }
-
-    .intro {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: clamp(1.75rem, 5vw, 4.5rem);
-      min-height: 19rem;
-      padding: clamp(2rem, 5vw, 3.75rem);
-      border: 1px solid #dbe3fa;
-      border-radius: 1.75rem;
-      background: linear-gradient(120deg, #edf2ff 20%, #e7efff 68%, #dee8ff);
-    }
-
-    h1, h2, h3, p { margin: 0; }
-
-    h1 {
-      font-size: clamp(2.25rem, 6vw, 4rem);
-      font-weight: 760;
-      line-height: 1.15;
-      letter-spacing: -0.055em;
-    }
-
-    .name { color: var(--accent); }
-
-    .intro p {
-      max-width: 33rem;
-      margin-top: 1.25rem;
-      color: var(--muted);
-      font-size: clamp(1rem, 2vw, 1.125rem);
-      line-height: 1.85;
-    }
-
-    .portrait {
-      display: block;
-      width: clamp(7rem, 17vw, 10.5rem);
-      height: auto;
-      aspect-ratio: 1;
-      border: 5px solid #fff;
-      border-radius: 50%;
-      background: #fff;
-      object-fit: cover;
-      box-shadow: 0 0 0 0.625rem #ffffff6b, 0 1.25rem 2.5rem #243d8c24;
-    }
-
-    .projects { padding-block: clamp(2.5rem, 6vw, 4rem); }
-
-    .section-heading {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 0.25rem 1.25rem;
-      margin-bottom: 1.25rem;
-    }
-
-    h2 {
-      font-size: clamp(1.625rem, 3.5vw, 2.125rem);
-      line-height: 1.2;
-      letter-spacing: -0.035em;
-    }
-
-    .section-heading p { color: var(--muted); font-size: 0.9375rem; }
-
-    .project-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .project {
-      display: flex;
-      flex-direction: column;
-      padding: 1.625rem;
-      border: 1px solid var(--line);
-      border-top: 3px solid var(--project-color, var(--accent));
-      border-radius: 1rem;
-      background: #fff;
-      box-shadow: 0 0.35rem 1.25rem #18254c08;
-    }
-
-    .project:nth-child(2) { --project-color: #247d79; }
-    .project:nth-child(3) { --project-color: #7763b1; }
-
-    h3 {
-      font-size: 1.375rem;
-      line-height: 1.25;
-      letter-spacing: -0.025em;
-    }
-
-    .project p {
-      margin: 0.75rem 0 1.25rem;
-      color: var(--muted);
-    }
-
-    .project a {
-      align-self: flex-start;
-      margin-top: auto;
-      font-size: 0.9375rem;
-      font-weight: 650;
-    }
-
-    @media (max-width: 48rem) {
-      .project-grid { grid-template-columns: 1fr; }
-    }
-
-    @media (max-width: 34rem) {
-      .wrap { width: calc(100% - 2rem); }
-      .masthead { min-height: 3.75rem; }
-      .intro { grid-template-columns: 1fr; min-height: auto; border-radius: 1.25rem; }
-      .portrait { grid-row: 1; width: 5.5rem; }
-      .intro p { margin-top: 0.875rem; }
-      .project { padding: 1.25rem; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#23392e">
+  <meta name="description" content="Explore a storybook village in real-time 3D. Follow the stream, cross the bridges, and wander the hillside trails of Windward Valley.">
+  <link rel="icon" type="image/png" href="/sprout.png">
+  <title>Windward Tales</title>
+  <script type="module" crossorigin src="/assets/index-BzBqjNjK.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/three-math-DO9PD7nb.js">
+  <link rel="modulepreload" crossorigin href="/assets/three-renderer-Cqi4EVhY.js">
+  <link rel="stylesheet" crossorigin href="/assets/index-Dcyhk5Qj.css">
 </head>
 <body>
-  <header class="masthead wrap">
-    <span class="wordmark">Jing</span>
-    <a class="profile-link" href="https://github.com/triskn">GitHub · @triskn</a>
-  </header>
-
-  <main class="wrap">
-    <section class="intro" aria-labelledby="intro-title">
-      <div>
-        <h1 id="intro-title">Hi, I’m <span class="name">Jing</span>.</h1>
-        <p>I build small tools with local AI and test them on real hardware. Lately, I’ve been exploring what the Tiiny Pocket can do for creative work and everyday decisions.</p>
-      </div>
-      <img class="portrait" src="https://avatars.githubusercontent.com/u/99636790?v=4&amp;s=336" alt="Jing’s GitHub avatar" width="168" height="168">
+  <main id="experience" aria-label="Windward Tales, a 3D village">
+    <div id="world" aria-label="Interactive 3D scene"></div>
+    <div class="veil" aria-hidden="true"></div>
+    <header class="hero">
+      <div class="edition"><span class="edition-line"></span> WINDWARD VALLEY</div>
+      <h1>Windward <span>Tales</span></h1>
+      <p>Follow the stream. The wind will lead you home.</p>
+    </header>
+    <section class="time-panel" aria-label="Time of day">
+      <div class="time-label"><span id="timeLight"></span><span id="timeName">Noon · 12:00</span></div>
+      <div id="timeButtons" class="time-buttons" role="group" aria-label="Change the time of day"></div>
     </section>
-
-    <section class="projects" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <h2 id="projects-title">Tiiny Projects</h2>
-        <p>Three plugins for DeepSeek Harness</p>
+    <div class="visit" id="visit" hidden aria-live="polite">
+      <div id="visitTitle"></div><p id="visitText"></p>
+    </div>
+    <div class="mobile-walk" id="mobileWalk" aria-label="Movement controls">
+      <button data-key="KeyW" aria-label="Move forward">↑</button><button data-key="KeyA" aria-label="Move left">←</button>
+      <button data-key="KeyS" aria-label="Move backward">↓</button><button data-key="KeyD" aria-label="Move right">→</button>
+    </div>
+    <footer class="hud">
+      <div class="controls-hint">
+        <span><kbd>Left drag</kbd> Orbit</span><span><kbd>Right drag</kbd> Pan</span><span><kbd>Scroll</kbd> Zoom</span><span><kbd>W A S D</kbd> Move</span>
       </div>
-
-      <div class="project-grid">
-        <article class="project">
-          <h3>Tiiny 3D</h3>
-          <p>Turn a reference image into a textured 3D model. Inspect the output at each stage, rotate the preview, and export a GLB file.</p>
-          <a href="https://github.com/triskn/dsh-tiiny-3d" aria-label="View Tiiny 3D on GitHub">View on GitHub</a>
-        </article>
-
-        <article class="project">
-          <h3>Tiiny Video</h3>
-          <p>Start with a prompt and an optional first-frame image. Track generation, preview the finished clip, and save it locally from the DSH sidebar.</p>
-          <a href="https://github.com/triskn/dsh-tiiny-video" aria-label="View Tiiny Video on GitHub">View on GitHub</a>
-        </article>
-
-        <article class="project">
-          <h3>TiinyDecide</h3>
-          <p>Save recurring classification tasks as reusable workflows. Flag borderline cases for human review and compare the model’s original answer with the final decision in the run history.</p>
-          <a href="https://github.com/triskn/dsh-tiiny-decide" aria-label="View TiinyDecide on GitHub">View on GitHub</a>
-        </article>
+      <div class="transport">
+        <button id="free" class="mode active" type="button" aria-pressed="true"><i data-icon="compass"></i>Free Explore</button>
+        <button id="film" class="mode" type="button" aria-pressed="false"><i data-icon="play"></i><span id="filmLabel">Cinematic Tour</span></button>
       </div>
-    </section>
+      <div class="tools">
+        <button class="tool-button" id="overview" type="button" title="Return to overview" aria-label="Return to overview"><i data-icon="home"></i></button>
+        <button class="tool-button" id="mapToggle" type="button" title="Village Map" aria-label="Village Map" aria-expanded="false"><i data-icon="map"></i></button>
+        <button class="tool-button" id="fullscreen" type="button" title="Fullscreen" aria-label="Fullscreen"><i data-icon="expand"></i></button>
+      </div>
+    </footer>
+    <aside id="map" aria-label="Village Map" hidden>
+      <div class="map-head"><div><small>WINDWARD VALLEY</small><h2>Village Map</h2></div><button id="mapClose" aria-label="Close map">×</button></div>
+      <div id="mapDrawing" class="map-drawing"></div>
+      <div id="mapPlaces" class="map-places"></div>
+    </aside>
+    <div id="progress" hidden><span></span></div>
+    <div id="loading"><div class="loading-mark"></div><strong>Windward Tales</strong><p>The valley is waking up.</p></div>
   </main>
 </body>
 </html>
